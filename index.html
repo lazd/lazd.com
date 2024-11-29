@@ -4,13 +4,15 @@
 <meta name="author" content="Lawrence Davis">
 <meta name="description" content="The homepage of Lawrence Davis, Software Engineer">
 <meta name="robots" content="index, follow">
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
 <style type="text/css">
   html, body {
     height: 100%;
   }
 
   body {
+    width: 100%;
     margin: 0;
     font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 300;
@@ -46,20 +48,17 @@
   }
 
   .container {
-    display: table;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
   }
 
-  .innerContainer {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  }
-
   .contactContainer {
     text-align: center;
-    margin: 20px auto auto;
+    margin: 20px 0;
     font-size: 20px;
   }
 
@@ -75,9 +74,10 @@
   .button {
     display: inline-block;
     vertical-align: top;
-    height: 26px;
+    min-height: 26px;
     padding: 0 8px;
     margin: 0 6px;
+    white-space: nowrap;
 
     border-radius: 4px;
     border: 1px solid rgb(200, 200, 200);
@@ -124,55 +124,55 @@
 
   .socialButtons {
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
   }
 </style>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-2252954-2']);
-  _gaq.push(['_trackPageview']);
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65Y3GKQVLG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  (function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  gtag('config', 'G-65Y3GKQVLG');
 </script>
 </head>
 <body>
   <div class="container">
-    <div class="innerContainer">
-      <a href="/"><img class="logo" src="/images/lazd.net.png" alt="lazd.net"></a>
-      <div class="contactContainer" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="alternateName" content="Larry Davis">
-        <p>
-          <strong itemprop="name">Lawrence <span itemprop="additionalName">A. Z.</span> Davis</strong>
-        </p>
+    <img class="logo" src="images/lazd.net.png" alt="lazd.net">
+    <div class="contactContainer" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="alternateName" content="Larry Davis">
+      <p>
+        <strong itemprop="name">Lawrence <span itemprop="additionalName">A. Z.</span> Davis</strong>
+      </p>
 
-        <p>
-          <span itemprop="jobTitle">Software Engineer</span> &mdash; <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">San Francisco</span></span>
-        </p>
+      <p>
+        <span itemprop="jobTitle">Software Engineer</span> &mdash; <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">CA Remote</span></span>
+      </p>
 
-        <p>
-          <a href="/" itemprop="email"><span class="__cf_email__" data-cfemail="abc7cad1cfc5cedfebccc6cac2c785c8c4c6">[email&#160;protected]</span></a>
-        </p>
-      </div>
-      <div class="socialButtons">
-        <a class="button" href="http://blog.lazd.net/"><img src="/images/icon-blog.png" alt="Read my blog">lazdBlog</a>
+      <p>
+        <a href="/" itemprop="email"><span class="__cf_email__" data-cfemail="abc7cad1cfc5cedfebccc6cac2c785c8c4c6">[email&#160;protected]</span></a>
+      </p>
+    </div>
+    <div class="socialButtons">
+      <a target="_blank" class="button" href="http://blog.lazd.net/"><img src="images/icon-blog.png" alt="Read my blog">lazdBlog</a>
 
-        <a class="button" href="https://www.linkedin.com/pub/larry-davis/30/b10/505"><img src="images/icon-linkedin.png" alt="View my LinkedIn profile">View profile</a>
+      <a class="github-button" href="https://github.com/lazd" data-size="large" data-show-count="true" aria-label="Follow @lazd on GitHub">@lazd</a>
 
-        <a href="https://twitter.com/lazdnet" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @lazdnet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <a target="_blank" class="button" href="https://www.linkedin.com/pub/larry-davis/30/b10/505"><img src="images/icon-linkedin.png" alt="View my LinkedIn profile">LinkedIn</a>
 
-        <a class="github-button" href="https://github.com/lazd" data-size="large" data-show-count="true" aria-label="Follow @lazd on GitHub">Follow @lazd</a>
-      </div>
+      <a target="_blank" class="button" href="https://twitter.com/lazdnet"><img src="images/twitter.svg" alt="Follow me on Twitter">@lazdnet</a>
+
+      <a target="_blank" class="button" href="https://bsky.app/profile/lazd.net"><img src="images/bluesky.svg" alt="Folow me on Bluesky">@lazd.net</a>
+
+      <a target="_blank" class="button" href="https://www.youtube.com/@lazdnet"><img src="images/youtube.svg" alt="Subscribe to me on YouTube">@lazdnet</a>
     </div>
   </div>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 </html>
